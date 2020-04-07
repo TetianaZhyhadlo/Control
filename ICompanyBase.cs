@@ -6,7 +6,7 @@ namespace Control_Company
 {
     public interface ICompanyBase
     {
-       void AddTo(string some, Employ name);
+       void AddToTeam(Employ name);
        void ShowAll();
         
     }

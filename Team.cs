@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Control_Company
 {
-    public delegate void ToAll(string announcement);
+    
     public class Team : ICompanyBase, IStructure
     {
         public string Name { get; set; }
@@ -16,11 +16,9 @@ namespace Control_Company
             EmpList = new List<Employ>();
         }
 
-        public int EmployeCount(string name)
+        public int EmployeCount()
         {
-            int count = 0;
-            if (name == this.Name)
-                count= this.EmpList.Count();
+            int count= this.EmpList.Count();
             return count;
         }
 
@@ -30,9 +28,8 @@ namespace Control_Company
                 .ForEach(x => Console.WriteLine(x.FirstName, x.LastName, ConsoleColor.Cyan));
         }
 
-        public void AddTo(string some, Employ first)
+        public void AddToTeam(Employ first)
         {
-            if (some == this.Name)
                 EmpList.Add(first);
         }
     }

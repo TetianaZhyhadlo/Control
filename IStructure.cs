@@ -7,7 +7,7 @@ namespace Control_Company
     public interface IStructure
     {
         public string Name { get; set; }
-        public int EmployeCount(string name); 
+        public int EmployeCount(); 
     }
 
 }
